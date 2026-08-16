@@ -18,6 +18,6 @@
 
 ## Conceito pretendido
 
-**Conceito:** _C__ (A / B / C)
+**Conceito:** _B_ (A / B / C)
 
 A justificativa está no fim do arquivo `esteira-da-analise.md`.
