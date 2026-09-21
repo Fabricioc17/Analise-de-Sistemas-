@@ -5,7 +5,7 @@ Turma: 2º ano — Técnico em Informática Integrado
 
 ## Diagrama
 
-![Diagrama de Classes do BiblioTech](diagrama-classes.png)
+![Diagrama de Classes do BiblioTech](diagrama-classes.pn)
 
 ## Por que estes números (associação Bibliotecario — Emprestimo)
 
