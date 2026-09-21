@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" modified="2026-09-21T17:00:00.000Z" agent="Mozilla/5.0" version="24.7.17">
+  <diagram name="Diagrama de Classes BiblioTech" id="bibliotech">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- USUARIO -->
+        <mxCell id="usuario" value="Usuario" style="swimlane;fontStyle=1;horizontal=0;startSize=30;rounded=0;html=1;fillColor=#111111;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="430" y="40" width="220" height="210" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="usuario_atributos" value="- nome: String&lt;br&gt;- matricula: String" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="usuario">
+          <mxGeometry y="30" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="usuario_operacoes" value="+ entrar(): boolean&lt;br&gt;+ realizarLogin(): boolean&lt;br&gt;+ sair(): void" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="usuario">
+          <mxGeometry y="130" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- LEITOR -->
+        <mxCell id="leitor" value="Leitor" style="swimlane;fontStyle=1;horizontal=0;startSize=30;rounded=0;html=1;fillColor=#111111;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="70" y="280" width="220" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leitor_atributos" value="- limiteEmprestimos: int" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="leitor">
+          <mxGeometry y="30" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="leitor_operacoes" value="+ podePegarEmprestado(): boolean" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="leitor">
+          <mxGeometry y="80" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- BIBLIOTECARIO -->
+        <mxCell id="bibliotecario" value="Bibliotecario" style="swimlane;fontStyle=1;horizontal=0;startSize=30;rounded=0;html=1;fillColor=#111111;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="700" y="280" width="230" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bibliotecario_atributos" value="- cargo: String" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="bibliotecario">
+          <mxGeometry y="30" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bibliotecario_operacoes" value="+ cadastrarLivro(): void&lt;br&gt;+ removerLivro(): void&lt;br&gt;+ realizarEmprestimo(): void" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="bibliotecario">
+          <mxGeometry y="80" width="230" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- EMPRESTIMO -->
+        <mxCell id="emprestimo" value="Emprestimo" style="swimlane;fontStyle=1;horizontal=0;startSize=30;rounded=0;html=1;fillColor=#111111;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="330" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="emprestimo_atributos" value="- dataRetirada: Date&lt;br&gt;- dataDevolucao: Date" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="emprestimo">
+          <mxGeometry y="30" width="330" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="emprestimo_operacoes" value="+ calcularDevolucao(): Date&lt;br&gt;+ estaAtrasado(): boolean" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="emprestimo">
+          <mxGeometry y="110" width="330" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- LIVRO -->
+        <mxCell id="livro" value="Livro" style="swimlane;fontStyle=1;horizontal=0;startSize=30;rounded=0;html=1;fillColor=#111111;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="700" y="500" width="230" height="190" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="livro_atributos" value="- titulo: String&lt;br&gt;- autor: String&lt;br&gt;- ano: int" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="livro">
+          <mxGeometry y="30" width="230" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="livro_operacoes" value="+ estaDisponivel(): boolean&lt;br&gt;+ marcarComoEmprestado(): void" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="livro">
+          <mxGeometry y="110" width="230" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- RESERVA -->
+        <mxCell id="reserva" value="Reserva" style="swimlane;fontStyle=1;horizontal=0;startSize=30;rounded=0;html=1;fillColor=#111111;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="400" y="730" width="230" height="170" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="reserva_atributos" value="- dataReserva: Date&lt;br&gt;- status: String" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="reserva">
+          <mxGeometry y="30" width="230" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="reserva_operacoes" value="+ cancelar(): void&lt;br&gt;+ confirmar(): void" style="text;html=1;align=left;vertical=top;spacingLeft=8;spacingTop=5;fontColor=#FFFFFF;" vertex="1" parent="reserva">
+          <mxGeometry y="110" width="230" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- HERANÇA LEITOR -> USUARIO -->
+        <mxCell id="heranca_leitor" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;endFill=0;strokeColor=#FFFFFF;" edge="1" parent="1" source="leitor" target="usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- HERANÇA BIBLIOTECARIO -> USUARIO -->
+        <mxCell id="heranca_bibliotecario" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;endFill=0;strokeColor=#FFFFFF;" edge="1" parent="1" source="bibliotecario" target="usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- LEITOR - EMPRESTIMO -->
+        <mxCell id="associacao_leitor" value="faz" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#FFFFFF;fontColor=#FFFFFF;html=1;" edge="1" parent="1" source="leitor" target="emprestimo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_leitor" value="1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="280" y="450" width="40" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_emprestimo_leitor" value="0..*" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="100" y="475" width="50" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- BIBLIOTECARIO - EMPRESTIMO -->
+        <mxCell id="associacao_bibliotecario" value="registra" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#FFFFFF;fontColor=#FFFFFF;html=1;" edge="1" parent="1" source="bibliotecario" target="emprestimo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_bibliotecario" value="1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="650" y="430" width="40" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_emprestimo_bibliotecario" value="0..*" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="380" y="470" width="50" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- EMPRESTIMO - LIVRO -->
+        <mxCell id="associacao_livro" value="refere-se" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#FFFFFF;fontColor=#FFFFFF;html=1;" edge="1" parent="1" source="emprestimo" target="livro">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_emprestimo_livro" value="0..*" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="580" y="555" width="50" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_livro_emprestimo" value="1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="680" y="555" width="40" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- RESERVA - LIVRO -->
+        <mxCell id="associacao_reserva" value="possui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#FFFFFF;fontColor=#FFFFFF;html=1;" edge="1" parent="1" source="reserva" target="livro">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_reserva" value="0..*" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="625" y="700" width="50" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mult_livro_reserva" value="1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="700" width="40" height="30" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
